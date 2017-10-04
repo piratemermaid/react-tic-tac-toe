@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Grid from './components/grid';
 import PlayerPanel from './components/player_panel';
+import NewGameBtn from './components/new_game_btn';
 
 class App extends React.Component {
 	constructor(props) {
@@ -91,11 +92,12 @@ class App extends React.Component {
 						P2Win={this.state.P2Win}
 						tie={this.state.tie} />
 				</div>
-				<div className="col-md-4">
+				<div className="col-md-4 text-center">
 					<Grid
 						tiles={this.state.tiles}
 						tileClicked={this.tileClicked.bind(this)}
 						gameEnded={this.state.gameEnded} />
+					<NewGameBtn />
 				</div>
 				<div className="col-md-4 text-center">
 					<PlayerPanel
