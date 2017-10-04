@@ -7,7 +7,9 @@ This is a simple tic tac toe app creating using React. I am currently learning R
 ### To Do
 
 -Improve design
+
 -Check for tie
+
 -Add button to start new game
 
 #### Boilerplate

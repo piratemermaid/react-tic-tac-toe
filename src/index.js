@@ -40,10 +40,16 @@ class App extends React.Component {
 		}
 		this.setState({ tiles: newTile });
 		newTile[index].clicked = true;
-		this.setState({ turnNumber: this.state.turnNumber + 1 });
 
 		if(this.state.turnNumber > 3) {
 			this.checkWin();
+		}
+		
+		this.setState({ turnNumber: this.state.turnNumber + 1 });
+
+		console.log(this.state.turnNumber);
+		if(this.state.turnNumber === 8) {
+			this.setState({ tie: true });
 		}
 	}
 
@@ -66,12 +72,12 @@ class App extends React.Component {
 	checkThree(a, b, c) {
 		var tiles = this.state.tiles;
 		if(tiles[a-1].X === true && tiles[b-1].X === true && tiles[c-1].X === true) {
-			// console.log('P1 wins!');
+			console.log('p1 wins');
 			this.setState({ gameEnded: true, P1Win: true });
-			// console.log('P1 win', this.state.P1Win);
+			console.log(this.state.P1Win);
 		}
 		else if(tiles[a-1].O === true && tiles[b-1].O === true && tiles[c-1].O === true) {
-			console.log('P2 wins!');
+			console.log('p2 wins');
 			this.setState({ gameEnded: true, P2Win: true });
 		}
 	}
