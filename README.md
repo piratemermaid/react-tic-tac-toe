@@ -8,8 +8,6 @@ This is a simple tic tac toe app creating using React. I am currently learning R
 
 -Improve design
 
--Add button to start new game
-
 #### Boilerplate
 
 I used Stephen Grider's boilerplate:
